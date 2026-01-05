@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TaskEarn App</title>
 
   <!-- PWA -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
 
   <style>
     body {
@@ -18,7 +18,9 @@
       text-align: center;
       padding: 40px 20px;
     }
-    h1 { color: #38bdf8; }
+    h1 {
+      color: #38bdf8;
+    }
     .btn {
       background: #22c55e;
       padding: 12px 20px;
@@ -31,13 +33,26 @@
     }
   </style>
 </head>
-<body>
 
+<body>
   <h1>TaskEarn</h1>
   <p>Complete tasks & earn money</p>
-
   <a class="btn" href="#">Login / Signup</a>
 
+  <!-- Service Worker Register -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker
+          .register("/taskeearn-pwa/service-worker.js")
+          .then(function (registration) {
+            console.log("Service Worker registered:", registration);
+          })
+          .catch(function (error) {
+            console.log("Service Worker registration failed:", error);
+          });
+      });
+    }
+  </script>
 </body>
 </html>
-<!-- deploy trigger -->
