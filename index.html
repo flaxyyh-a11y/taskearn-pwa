@@ -44,7 +44,7 @@
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
         navigator.serviceWorker
-          .register("/taskeearn-pwa/service-worker.js")
+          .register("service-worker.js")
           .then(function (registration) {
             console.log("Service Worker registered:", registration);
           })
