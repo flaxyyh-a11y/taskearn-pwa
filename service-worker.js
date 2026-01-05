@@ -1,9 +1,9 @@
 const CACHE_NAME = "taskeearn-v1";
 const URLS_TO_CACHE = [
-  "/taskeearn-pwa/",
-  "/taskeearn-pwa/index.html",
-  "/taskeearn-pwa/manifest.json",
-  "/taskeearn-pwa/icon.png"
+  "./",
+  "./index.html",
+  "./manifest.json",
+  "./icon.png"
 ];
 
 self.addEventListener("install", event => {
