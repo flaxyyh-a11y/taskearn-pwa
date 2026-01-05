@@ -1,7 +1,9 @@
+
 {
   "name": "TaskEarn",
   "short_name": "TaskEarn",
-  "start_url": ".",
+  "start_url": "/taskeearn-pwa/",
+  "scope": "/taskeearn-pwa/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
